@@ -1,0 +1,14 @@
+
+<div class="text-center mt-3">
+    <h3>Corona Virus Cases Distribution {{name}} </h3>
+</div>
+
+<div style="display: block;">
+    <canvas baseChart
+    [datasets]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [legend]="pieChartLegend">
+    </canvas>
+</div>

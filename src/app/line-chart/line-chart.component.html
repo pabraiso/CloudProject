@@ -1,0 +1,13 @@
+
+<div class="text-center mt-3">
+    <h3> Total Corona Virus Cases {{name}}</h3>
+</div>
+<div style="display: block;">
+    <canvas baseChart
+    [datasets]="lineData"
+    [labels]="lineLabel"
+    [options]="lineOptions"
+    [legend]="lineLegend"
+    [chartType]="lineType">
+    </canvas>
+</div>

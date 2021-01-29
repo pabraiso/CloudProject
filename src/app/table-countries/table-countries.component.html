@@ -1,0 +1,27 @@
+<div>
+    <h2 style="background-color: #fae8e8A1;">
+        Corona Virus Cases by Country
+    </h2>
+    <table class="table table-bordered table-stripped">
+        <thead>
+                <th sortable-column="Country" style="background-color:dimgrey; color:white">Country</th>
+                <th style="background-color: #c9e663a1;">New Cases </th>
+                <th style="background-color: #c9e663a1 ;">Total Cases</th>
+                <th style="background-color: rgb(101, 154, 224);">New Recoveries</th>
+                <th style="background-color: rgb(101, 154, 224);">Total Recoveries</th>
+                <th style="background-color: #ff4545A1;">New Deaths</th>
+                <th style="background-color: #ff4545A1;">Total Deaths</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let country of data">
+                <td style="background-color:dimgrey; color:white"><a routerLink="/CountryPage/{{country.country}}" style="color: white;"> {{ country.country }} </a></td>
+                <td style="background-color: rgb(252, 252, 136);">{{ country.NewConfirmed  }}</td>
+                <td style="background-color: rgb(252, 252, 136);">{{ country.TotalConfirmed }}</td>
+                <td style="background-color: rgb(140, 179, 230);">{{ country.NewRecovered }}</td>
+                <td style="background-color: rgb(140, 179, 230);">{{ country.TotalRecovered }}</td>
+                <td style="background-color: #ff4545A1;">{{ country.NewDeath }}</td>
+                <td style="background-color: #ff4545A1;">{{ country.TotalDeath  }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
